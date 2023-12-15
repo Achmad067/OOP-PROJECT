@@ -1,81 +1,82 @@
 package id.ac.undiksha.ais.people;
 
-public class Student {
+import id.ac.undiksha.ais.organizations.StudyProgram;
+//only can extend 1 class. we can implement more than 1 interface
+public class Student extends Human{
 
 	private String studentId;
-	private String name;
-	private String birthDate;
-	private boolean gender; // 0=female and 1=male, bipolar ga diajak DD
-	private String address;
 	private int smtr;
+	
+	public Student(){
+		this.studentId = "<Student Id>";
+		this.smtr = 0;
+	}
+	
+	
+
+	public Student(String studentId, String name, String birthDate, boolean gender, String address, int smtr) {
+		super();
+		this.studentId = studentId;
+		this.smtr = smtr;
+	}
+
+	
+
+// polymorphism, overloading, from human superclass to student	
+	public Student(
+			String name, 
+			String birthDate, 
+			boolean gender, 
+			String address, 
+			String studentId, 
+			int smtr) 
+	{
+		super(name, birthDate, gender, address);
+		this.studentId = studentId;
+		this.smtr = smtr;
+	}
+
+
+
+	public Student(
+			String name, 
+			String birthDate, 
+			boolean gender, 
+			String address) 
+	{
+		super(name, birthDate, gender, address);
+		
+	}
+
+
 
 	public String getStudentId() {
-		return this.studentId;
-	}
-	
-	public String getName() {
-		return name;
+		return studentId;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+
+
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
 	}
 
-	public String getBirthDate() {
-		return birthDate;
-	}
 
-	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	public boolean isGender() {
-		return gender;
-	}
-
-	public String getGender() {
-		if (this.isGender()) {
-			return "Male";
-		}
-		else {
-			return "Female";
-		}	
-	}
-	
-	public void setGender(boolean gender) {
-		this.gender = gender;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
 
 	public int getSmtr() {
 		return smtr;
 	}
 
+
+
 	public void setSmtr(int smtr) {
 		this.smtr = smtr;
 	}
 
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
-	}
-	
+
+	@Override
 	public void printAll() {
-		System.out.println("Name : " + this.name);
+		super.printAll();
 		System.out.println("Student ID : " + this.studentId);
-		if (this.gender) {
-			System.out.println("Gender : Male");
-		}
-		else {
-			System.out.println("Gender : Female");
-		}
-		System.out.println("Address : " + this.address);
 		System.out.println("Smtr : " + this.smtr);
 		
 //		student1.studentId = "21345";
@@ -83,4 +84,7 @@ public class Student {
 //		student1.smtr = 6;
 //		student1.address = "Singaraja"
 	}
+	
+	public StudyProgram prodi = new StudyProgram();
+	
 }
