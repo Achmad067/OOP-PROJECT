@@ -1,0 +1,30 @@
+#BlueJ class context
+comment0.target=Robot
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Robot\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Robot\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment10.params=
+comment10.target=void\ testEndGame()
+comment11.params=
+comment11.target=void\ increaseScore()
+comment12.params=
+comment12.target=void\ showStatus()
+comment2.params=
+comment2.target=void\ robotMovement()
+comment3.params=
+comment3.target=void\ detectBlockCollision()
+comment4.params=
+comment4.target=void\ detectWallCollision()
+comment5.params=
+comment5.target=void\ detectHome()
+comment6.params=
+comment6.target=void\ eatPizza()
+comment7.params=
+comment7.target=Robot()
+comment8.params=
+comment8.target=void\ animate()
+comment8.text=private\ int\ animationCounter\ \=\ 0\ ;\r\n\ \ \ \ public\ void\ animateWithDelay(){\r\n\ \ \ \ \ \ \ \ if\ (animationCounter\ >\=\ 5)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ animate();\ \ //\ Ganti\ gambar\ animasi\r\n\ \ \ \ \ \ \ \ \ \ \ \ animationCounter\ \=\ 0;\ \ //\ Reset\ penghitung\r\n\ \ \ \ \ \ \ \ }\ \r\n\ \ \ \ \ \ \ \ else{\r\n\ \ \ \ \ \ \ \ \ \ \ \ animationCounter++;\ \ //\ Tambahkan\ penghitung\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment9.params=
+comment9.target=void\ removeLife()
+numComments=13
